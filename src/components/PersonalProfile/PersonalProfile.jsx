@@ -6,6 +6,7 @@ function PersonalProfile() {
         <div>
           <h1>This is a filler header
             <button>New Post</button>
+            <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
         </div>
       </div>
