@@ -17,8 +17,9 @@ function CreatePost() {
           <input type="text" name="song" placeholder='song'/>
           <input type="text" name="album" placeholder='album'/>
           <input type="text" name="artist" placeholder='artist' />
-          
+          <input type="text" name="description" placeholder='description' />
           </form>
+          <button>Publish</button>
         </div>
       </div>
     );
