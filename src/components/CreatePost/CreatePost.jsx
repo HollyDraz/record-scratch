@@ -10,10 +10,15 @@ function CreatePost() {
     return (
       <div className="container">
         <div>
-          <h1>This is a filler header
-            <button>New Post</button>
+          <h1>Create Post <br />
             <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
+          <form>
+          <input type="text" name="song" placeholder='song'/>
+          <input type="text" name="album" placeholder='album'/>
+          <input type="text" name="artist" placeholder='artist' />
+          
+          </form>
         </div>
       </div>
     );
