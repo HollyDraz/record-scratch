@@ -4,9 +4,10 @@ function HomePage() {
     return (
       <div className="container">
         <div>
-          <h1>This is my header for record Scratch
+          <h1>This is my header for record Scratch <br />
             <button>New Post</button>
           </h1>
+          
         </div>
       </div>
     );
