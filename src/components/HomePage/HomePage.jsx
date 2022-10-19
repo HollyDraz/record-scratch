@@ -15,7 +15,6 @@ import Grid from '@mui/material/Grid';
 
 function HomePage() {
 const history = useHistory();
-
 const [songList, setSongList] = useState([]);
 
 
@@ -48,46 +47,64 @@ const bull = (
 
 );
 
-const card = (
 
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-      {songList.map (song => {
-            console.log('song list', songList);
-            return <div key={song.id}>
-              song: {song.title} <br />
-              artist: {song.artist} <br />
-              album: {song.album} <br />
-              description: {song.description}
 
-            </div>
-          })}
-      </Typography>
-    </CardContent>
+// const card = (
+//   <React.Fragment>
+//     <CardContent>
+//       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+//       {songList.map (song => {
+//             console.log('song list', songList);
+//             return<div key={song.id}>
+//               song: {song.title} <br />
+//               artist: {song.artist} <br />
+//               album: {song.album} <br />
+//               description: {song.description}
 
-    <CardActions>
-    <Button onClick={() => history.push('/edit')}>Edit post</Button>
-    <FavoriteIcon />
-    </CardActions>
-  </React.Fragment>
-);
+//             </div>
+//           })}
+//       </Typography>
+//     </CardContent>
+
+//     <CardActions>
+//     <Button onClick={() => history.push('/edit')}>Edit post</Button>
+//     <FavoriteIcon />
+//     </CardActions>
+//   </React.Fragment>
+// );
 
 
     return (
       <div className="container">
         <div>
           <h1>This is my header for record Scratch <br />
+          <Button onClick={() => history.push('/create')}>Create Post</Button>
       
-
-            
           </h1>
           <Box sx={{ minWidth: 275 }}>
           <Grid container spacing={0}> 
-          <Card variant="outlined">{card}</Card>
+          
+          {songList.map (song => {
+            console.log('song list', songList);
+            return<div key={song.id}>
+              <Card variant="outlined">
+                <CardContent>
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                          song: {song.title} <br />
+                          artist: {song.artist} <br />
+                          album: {song.album} <br />
+                          description: {song.description}
+                         </Typography>   
+                          <CardActions>
+                            <Button onClick={() => history.push('/edit')}>Edit post</Button>
+                              <FavoriteIcon />
+                          </CardActions>
+                </CardContent>
+              </Card>
+            </div>
+          })}
           </Grid>
           </Box>
-
           <br />
 
       

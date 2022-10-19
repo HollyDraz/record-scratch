@@ -16,10 +16,19 @@ router.get('/', (req, res) => {
 })
   
   /**
-   * POST route template
+   * Create new song to add to the database 
    */
-  router.post('/', (req, res) => {
-    // POST route code here
+router.post('/', (req, res) => {
+    const newSong = req.body;
+    const queryText = `INSERT INTO "songs" (""title", "artist", "album", "description")
+                    VALUES ($1, $2, $3, $4)`;
+    pool.query(queryText, [newSong.title, newSong.artist, newSong.album, newSong.description])
+    .then((result) => {
+      res.sendStatus(200);
+    }).catch(error => {
+      console.log('error adding a new song', error);
+      res.sendStatus(500)
+    })
   });
 
 
