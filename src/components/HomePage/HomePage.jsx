@@ -11,6 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import Grid from '@mui/material/Grid';
 
 function HomePage() {
 const history = useHistory();
@@ -27,6 +28,7 @@ const bull = (
 );
 
 const card = (
+
   <React.Fragment>
     <CardContent>
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -49,7 +51,17 @@ const card = (
             
           </h1>
           <Box sx={{ minWidth: 275 }}>
+          <Grid container spacing={0}> 
           <Card variant="outlined">{card}</Card>
+          </Grid>
+          </Box>
+
+          <br />
+
+          <Box sx={{ minWidth: 275 }}>
+          <Grid container spacing={0}> 
+          <Card variant="outlined">{card}</Card>
+          </Grid>
           </Box>
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
+import {useSelector, useDispatch } from 'react-redux'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function CreatePost() {
   const history = useHistory();
-
-
 
     return (
       <div className="container">
