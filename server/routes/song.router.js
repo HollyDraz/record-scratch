@@ -20,8 +20,9 @@ router.get('/', (req, res) => {
    */
 router.post('/', (req, res) => {
     const newSong = req.body;
+    console.log('testing', req.body );
     console.log('user id is', req.user.id)
-    const queryText = `INSERT INTO "songs" ("user_id" "title", "artist", "album", "description")
+    const queryText = `INSERT INTO "song" ("user_id", "title", "artist", "album", "description")
                        VALUES (${req.user.id}, $1, $2, $3, $4)`;
     pool.query(queryText, [newSong.title, newSong.artist, newSong.album, newSong.description])
     .then((result) => {
@@ -31,6 +32,9 @@ router.post('/', (req, res) => {
       res.sendStatus(500)
     })
   });
+
+  // delete song
+
 
 
 

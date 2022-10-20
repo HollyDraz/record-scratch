@@ -27,7 +27,7 @@ const fetchSongs = () => {
         })
         .catch(error => {
             console.log(error);
-            alert('Something went wrong fetching your favorites.');
+            alert('Something went wrong fetching your songs.');
         });
 }
 
@@ -77,11 +77,11 @@ const bull = (
     return (
       <div className="container">
         <div>
-          <h1>This is my header for record Scratch <br />
-          <Button onClick={() => history.push('/create')}>Create Post</Button>
+          <h1>Welcome To Record Scratch! <br />
+          <Button variant="outlined" onClick={() => history.push('/create')}>Create Post</Button>
       
           </h1>
-          <Box sx={{ minWidth: 275 }}>
+          <Box sx={{ minWidth: 300 }}>
           <Grid container spacing={0}> 
           
           {songList.map (song => {
@@ -89,15 +89,15 @@ const bull = (
             return<div key={song.id}>
               <Card variant="outlined">
                 <CardContent>
-                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                        <Typography sx={{ fontSize: 14 }} color="black" gutterBottom>
                           song: {song.title} <br />
                           artist: {song.artist} <br />
                           album: {song.album} <br />
                           description: {song.description}
                          </Typography>   
                           <CardActions>
-                            <Button onClick={() => history.push('/edit')}>Edit post</Button>
-                              <FavoriteIcon />
+                            <Button variant="outlined" onClick={() => history.push('/edit')}>Edit post</Button>
+                            <FavoriteIcon />
                           </CardActions>
                 </CardContent>
               </Card>

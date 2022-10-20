@@ -13,8 +13,9 @@ function CreatePost() {
   const [newDescription, setNewDescription] = useState();
 
 
-  const createPost = (title, artist, album, description ) => {
-    console.log('in create post', title, artist, album, description);
+  const createPost = ( ) => {
+    console.log('in create post', newTitle, newArtist, newArtist, newAlbum);
+  
     axios({
       method: 'POST',
       url: 'api/song',
@@ -33,10 +34,6 @@ function CreatePost() {
   }
 
 
-
-
-
-
     return (
       <div className="container">
         <div>
@@ -44,12 +41,12 @@ function CreatePost() {
             <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
           <form onSubmit={createPost}>
-          <input onChange={(e) => setNewTitle(e.target.value)} value={newTitle} type="text" name="song" placeholder='song' />
-          <input onChange={(e) => setNewAlbum(e.target.value)} value={newAlbum} type="text" name="album" placeholder='album' />
-          <input onChange={(e) => setNewArtist(e.target.value)} value={newArtist} type="text" name="artist" placeholder='artist' />
-          <input onChange={(e) => setNewDescription(e.target.value)} value={newDescription} type="text" name="description" placeholder='description' />
+          <input onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' />
+          <input onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' />
+          <input onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' />
+          <input onChange={(e) => setNewDescription(e.target.value)} defaultValue={newDescription} type="text" name="description" placeholder='description' />
           </form>
-          <button type="submit">Publish</button>
+          <button onClick={createPost}>Publish</button>
         </div>
       </div>
     );
