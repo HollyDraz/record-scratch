@@ -33,6 +33,27 @@ router.post('/', (req, res) => {
     })
   });
 
+//update the song post
+router.put('/id', (req, res) => {
+  let songId = req.params.id;
+  let songArtist = req.body.artist;
+  let songAlbum = req.body.album;
+  let songDescription = req.body.description;
+  console.log(req.body);
+  const queryText = `UPDATE "song" SET 
+                    "title" =$1 , 
+                    "artist" =$2, 
+                    "album", =$3
+                    "description" =$4,
+                    WHERE id =${req.user.id} `;
+  pool.query(queryText, [songId, songArtist, songAlbum, songDescription])
+      .then((results) => {
+        res.sendStatus(200);
+      }).catch((error) => {
+        res.sendStatus(500);
+      });
+})
+
   // delete song
 
 
