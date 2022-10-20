@@ -19,10 +19,10 @@ function CreatePost() {
       method: 'POST',
       url: 'api/song',
       data: {
-        title: title,
-        artist: artist,
-        album: album,
-        description: description
+        title: newTitle,
+        artist: newArtist,
+        album: newAlbum,
+        description: newDescription
       }
     }).then((response) => {
       alert('new song created')
@@ -44,12 +44,12 @@ function CreatePost() {
             <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
           <form onSubmit={createPost}>
-          <input onChange={(e) => setNewTitle(e.target.value)} value={title} type="text" name="song" placeholder='song' />
-          <input onChange={(e) => setNewAlbum(e.target.value)} value={album} type="text" name="album" placeholder='album' />
-          <input onChange={(e) => setNewArtist(e.target.value)} value={artist} type="text" name="artist" placeholder='artist' />
-          <input onChange={(e) => setNewDescription(e.target.value)} value={description} type="text" name="description" placeholder='description' />
+          <input onChange={(e) => setNewTitle(e.target.value)} value={newTitle} type="text" name="song" placeholder='song' />
+          <input onChange={(e) => setNewAlbum(e.target.value)} value={newAlbum} type="text" name="album" placeholder='album' />
+          <input onChange={(e) => setNewArtist(e.target.value)} value={newArtist} type="text" name="artist" placeholder='artist' />
+          <input onChange={(e) => setNewDescription(e.target.value)} value={newDescription} type="text" name="description" placeholder='description' />
           </form>
-          <button onClick={submit}>Publish</button>
+          <button type="submit">Publish</button>
         </div>
       </div>
     );
