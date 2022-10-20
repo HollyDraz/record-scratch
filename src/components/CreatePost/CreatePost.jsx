@@ -43,13 +43,13 @@ function CreatePost() {
           <h1>Create Post <br />
             <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
-          <form>
-          <input type="text" name="song" placeholder='song'/>
-          <input type="text" name="album" placeholder='album'/>
-          <input type="text" name="artist" placeholder='artist' />
-          <input type="text" name="description" placeholder='description' />
+          <form onSubmit={createPost}>
+          <input onChange={(e) => setNewTitle(e.target.value)} value={title} type="text" name="song" placeholder='song' />
+          <input onChange={(e) => setNewAlbum(e.target.value)} value={album} type="text" name="album" placeholder='album' />
+          <input onChange={(e) => setNewArtist(e.target.value)} value={artist} type="text" name="artist" placeholder='artist' />
+          <input onChange={(e) => setNewDescription(e.target.value)} value={description} type="text" name="description" placeholder='description' />
           </form>
-          <button onClick={() => createPost}>Publish</button>
+          <button onClick={submit}>Publish</button>
         </div>
       </div>
     );
