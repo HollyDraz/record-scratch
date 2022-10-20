@@ -52,21 +52,21 @@ function App() {
           </Route> */}
 
           {/* //move to protected routes */}
-          <Route exact path="/homepage">
+          <ProtectedRoute exact path="/homepage">
             <HomePage />
-          </Route>
+          </ProtectedRoute>
           
-          <Route exact path="/create">
+          <ProtectedRoute exact path="/create">
             <CreatePost />
-          </Route>
+          </ProtectedRoute>
 
-          <Route exact path="/edit">
+          <ProtectedRoute exact path="/edit">
             <EditPost />
-          </Route>
+          </ProtectedRoute>
 
-          <Route exact path="/profile">
+          <ProtectedRoute exact path="/profile">
             <PersonalProfile />
-          </Route>
+          </ProtectedRoute>
 
 
           {/* For protected routes, the view could show one of several things on the same route.
