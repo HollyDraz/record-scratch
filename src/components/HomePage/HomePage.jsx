@@ -4,6 +4,9 @@ import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 // mui imports 
+//move this card into its own components 
+//once base mode is complete
+
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';

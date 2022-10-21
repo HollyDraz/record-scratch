@@ -27,6 +27,20 @@ function EditPost() {
   // include dispatch to update song deets
   // const new song  = { title: newTilte } 
 
+  const updateSong = (song) => {
+    newSong = {
+      title: newTitle,
+      artist: newArtist,
+      album: newAlbum,
+      description: newDescription
+    }
+    dispatch({type: 'UPDATE_SONG', payload: song});
+    console.log('test the updated song', newSong );
+
+
+    //add an alert here to let user know song was updated
+  }
+
 
 
 
@@ -41,7 +55,7 @@ function EditPost() {
         <div>
           <h1>Edit Post <br />
             <button onClick={() => history.push('/homepage')}>Home Page</button>
-            <p>SONG: {JSON.stringify(song)}</p>
+            {/* <p>SONG: {JSON.stringify(song)}</p> */}
           </h1>
           <form >
             {/* on change handlers needed */}
