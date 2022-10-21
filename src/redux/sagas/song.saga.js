@@ -1,21 +1,25 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-// function* songSaga(action){
+//saga for updating song in API 
+
+
+// function* updateSong(action){
 //     try{
-//         const song = yield axios.get(`/api/song/${action.payload}`);
-//         console.log('SONG DETAILS', song.data);
-//         yield put ({type: 'SET_SONG', payload: song.data})
- 
+//          yield axios.put(`/api/song/${action.payload}`);
+//         console.log('updated song', action.payload);
+//         yield put ({type: 'SET_SONG', payload: action.payload})
 //     }catch{
-//         console.log('an error occurred in song getter')
+//         console.log('an error occurred in song put')
 //     }
 // }
 
 
-//will need this later!! (for delete)
+
+
+//will need this later!! this is where the dispatch will land 
 function* songSaga() {
-    // yield takeLatest('REGISTER', songSaga);
+    // yield takeLatest('UPDATE_SONG', updateSong);
   }
   
 
