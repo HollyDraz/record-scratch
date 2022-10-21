@@ -17,6 +17,12 @@ function HomePage() {
 const history = useHistory();
 const [songList, setSongList] = useState([]);
 
+//function to select the song to be edited 
+const editSong = (song) => {
+  console.log('tesing edit song');
+
+}
+
 
 const fetchSongs = () => {
     console.log('in fetch songs');

@@ -7,6 +7,7 @@ import axios from 'axios';
 
 
 function EditPost() {
+  const  store = useSelector(store => store);//give the entire store
   const history = useHistory();
   const dispatch = useDispatch();
   const [editTitle, setNewTitle] = useState();
@@ -15,8 +16,7 @@ function EditPost() {
   const [editDescription, setNewDescription] = useState();
 
 
- 
-  
+//when edit button is clicked it populates the information for the post via id 
 
 
     return (
@@ -26,12 +26,14 @@ function EditPost() {
             <button onClick={() => history.push('/homepage')}>Home Page</button>
           </h1>
           <form >
-          <input onChange={(e) => setNewTitle(e.target.value)} defaultValue={editTitle} type="text" name="song" placeholder='song' />
-          <input onChange={(e) => setNewAlbum(e.target.value)} defaultValue={editArtist} type="text" name="album" placeholder='album' />
-          <input onChange={(e) => setNewArtist(e.target.value)} defaultValue={editAlbum} type="text" name="artist" placeholder='artist' />
-          <input onChange={(e) => setNewDescription(e.target.value)} defaultValue={editDescription} type="text" name="description" placeholder='description' />
+          <input type="text" name="song" placeholder='song' />  {/*//selected song . artist */}
+          <input type="text" name="album" placeholder='album' />
+          <input type="text" name="artist" placeholder='artist' />
+          <input type="text" name="description" placeholder='description' />
           </form>
-          <button>Publish</button>
+          <button>Publish</button> <br />
+       
+          <button>DELETE</button>
         </div>
       </div>
     );
