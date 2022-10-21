@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
@@ -16,12 +16,29 @@ import Grid from '@mui/material/Grid';
 function HomePage() {
 const history = useHistory();
 const [songList, setSongList] = useState([]);
+ //selectors and dispatch
+const song = useSelector (store => store.song);
+//test to see if I can get title to appear first 
+const dispatch = useDispatch();
+const {id} = useParams();
 
-//function to select the song to be edited 
-const editSong = (song) => {
-  console.log('tesing edit song');
 
-}
+  const handleSong = (song) => {
+    console.log('song  test', song);
+    dispatch({type: 'SET_SONG', payload: song});
+    console.log('song title test', song.title);
+    history.push('/edit')
+  }
+
+
+
+
+useEffect(() => {
+  console.log('page load');
+  fetchSongs()
+  //handleTitle()
+}, [id]);
+
 
 
 const fetchSongs = () => {
@@ -37,10 +54,6 @@ const fetchSongs = () => {
         });
 }
 
-useEffect(() => {
-    console.log('page load');
-    fetchSongs()
-}, []);
 
 const bull = (
   <Box
@@ -85,6 +98,7 @@ const bull = (
         <div>
           <h1>Welcome To Record Scratch! <br />
           <Button variant="outlined" onClick={() => history.push('/create')}>Create Post</Button>
+          
       
           </h1>
           <Box sx={{ minWidth: 300 }}>
@@ -102,7 +116,8 @@ const bull = (
                           description: {song.description}
                          </Typography>   
                           <CardActions>
-                            <Button variant="outlined" onClick={() => history.push('/edit')}>Edit post</Button>
+                            
+                            <Button variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
                             <FavoriteIcon />
                           </CardActions>
                 </CardContent>

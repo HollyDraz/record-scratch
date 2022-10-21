@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -7,16 +7,33 @@ import axios from 'axios';
 
 
 function EditPost() {
-  const  store = useSelector(store => store);//give the entire store
+  const store = useSelector(store => store);//give the entire store
   const history = useHistory();
+  //selectors and dispatch
+  const song = useSelector (store => store.selectedSong);
+  //test to see if I can get title to appear first 
   const dispatch = useDispatch();
-  const [editTitle, setNewTitle] = useState();
-  const [editArtist, setNewArtist] = useState();
-  const [editAlbum, setNewAlbum] = useState();
-  const [editDescription, setNewDescription] = useState();
+  const {id} = useParams();
 
 
-//when edit button is clicked it populates the information for the post via id 
+
+  useEffect(() => {
+    console.log('edit page', song);
+   
+  }, [] );
+  
+
+  // new function to update the post 'update song'
+  // include dispatch to update song deets
+  // const new song  = { title: newTilte } 
+
+
+
+
+//new value created 
+//const newTitle = 
+// 
+
 
 
     return (
@@ -24,11 +41,13 @@ function EditPost() {
         <div>
           <h1>Edit Post <br />
             <button onClick={() => history.push('/homepage')}>Home Page</button>
+            <p>SONG: {JSON.stringify(song)}</p>
           </h1>
           <form >
-          <input type="text" name="song" placeholder='song' />  {/*//selected song . artist */}
-          <input type="text" name="album" placeholder='album' />
-          <input type="text" name="artist" placeholder='artist' />
+            {/* on change handlers needed */}
+          <input  type="text" name="song" placeholder={song.title} /> 
+          <input type="text" name="album" placeholder={song.album} />
+          <input type="text" name="artist" placeholder={song.artist} />
           <input type="text" name="description" placeholder='description' />
           </form>
           <button>Publish</button> <br />

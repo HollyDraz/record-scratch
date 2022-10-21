@@ -1,17 +1,20 @@
-import { AttractionsTwoTone, Title } from "@mui/icons-material";
+//function that yields the info for a specific song 
 
-function* selectedSong(action){
-    try{
-        const details = yield axios.get(`/api/song/${action.payload}`);
-        console.log('SONG DETAILS', song.data);
-        yield put ({type: 'SET_TITLE', payload: title.data})
-        yield put ({type: 'SET_ARTIST', payload: artist.data })
-    }catch{
-        console.log('an error occurred in details getter')
+
+
+//reducer for song 
+const selectedSong = (state = {}, action ) => {
+    if(action.type === 'SET_SONG'){
+        console.log('in details reducer', action.payload)
+        return action.payload;
     }
+    return state;
+
 }
 
-  
-  // user will be on the redux state at:
-  // state.user
+//reducer for update song 
+
+
+
+
   export default selectedSong;
