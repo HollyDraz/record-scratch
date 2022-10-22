@@ -4,16 +4,26 @@ import { put, takeLatest } from 'redux-saga/effects';
 //saga for updating song in API 
 
 
-function* updateSong(action){
-    try{
-         yield axios.put(`/api/song/${action.payload}`);
-        console.log('updated song', action.payload);
-        yield put ({type: 'UPDATE_SONG', payload: action.payload})
-    }catch{
-        console.log('an error occurred in song put')
+// function* updateSong(action){
+//     try{
+//         yield put ({type: 'UPDATE_SONG', payload: action.payload})
+//         console.log('updated song', action.payload);
+//         yield put ({type: 'UPDATE_SONG', payload: action.payload})
+//     }catch{
+//         console.log('an error occurred in song put')
+//     }
+// }
+
+function* updateSong(action) {
+    try {
+     yield put ({type: 'UPDATE_SONG', payload: action.payload})
+      //const newData = yield call(Your-API-Method, id, data); // Refer sample to api calls in remote.js file
+      yield put ({type: 'UPDATE_SONG', payload: action.payload})
+    } catch {
+        console.log('error in update song ');
+      // Handle your errors here
     }
 }
-
 
 
 

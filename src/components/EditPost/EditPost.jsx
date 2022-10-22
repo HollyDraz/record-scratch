@@ -7,46 +7,44 @@ import axios from 'axios';
 
 
 function EditPost() {
-  const store = useSelector(store => store);//give the entire store
-  const history = useHistory();
-  //selectors and dispatch
-  const song = useSelector (store => store.selectedSong);
-  //test to see if I can get title to appear first 
-  const dispatch = useDispatch();
-  const {id} = useParams();
+const store = useSelector(store => store);//give the entire store
+const history = useHistory();
+//selectors and dispatch
+const song = useSelector (store => store.selectedSong);
+const dispatch = useDispatch();
+const {id} = useParams();
+// all my song details 
+const [newTitle, setNewTitle] = useState('');
+const [newArtist, setNewArtist] = useState('');
+const [newAlbum, setNewAlbum] = useState('');
+const [newDescription, setNewDescription] = useState('');
+
 
 
 
   useEffect(() => {
-    console.log('edit page', song);
+    console.log('edit page', );
+    //dispatch({type: 'UPDATE_SONG', payload: newSong });
    
   }, [] );
   
 
-  // new function to update the post 'update song'
-  // include dispatch to update song deets
-  // const new song  = { title: newTilte } 
+// new function to update the post 'update song'
+// include dispatch to update song deets
+// const new song  = { title: newTilte } 
 
-  const updateSong = (song) => {
-    newSong = {
+const updateSong = () => {
+  console.log('in the update song')
+    const newSong = {
       title: newTitle,
       artist: newArtist,
       album: newAlbum,
       description: newDescription
     }
-    dispatch({type: 'UPDATE_SONG', payload: song});
-    console.log('test the updated song', newSong );
-
-
-    //add an alert here to let user know song was updated
+    const dispatch = useDispatch();
+    dispatch({type: 'UPDATE_SONG', payload: newSong });
+    console.log('updated song', newSong  ) 
   }
-
-
-
-
-//new value created 
-//const newTitle = 
-// 
 
 
 
@@ -59,12 +57,13 @@ function EditPost() {
           </h1>
           <form >
             {/* on change handlers needed */}
-          <input  type="text" name="song" placeholder={song.title} /> 
+            {/* onChange={updateSong(song)}  */}
+          <input onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> 
           <input type="text" name="album" placeholder={song.album} />
           <input type="text" name="artist" placeholder={song.artist} />
-          <input type="text" name="description" placeholder='description' />
+          <input type="text" name="description" placeholder={song.description} />
           </form>
-          <button>Publish</button> <br />
+          <button onClick={() => updateSong()} >Publish</button> <br />
        
           <button>DELETE</button>
         </div>
