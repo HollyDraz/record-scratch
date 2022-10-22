@@ -14,16 +14,16 @@ import { put, takeLatest } from 'redux-saga/effects';
 //     }
 // }
 
-function* updateSong(action) {
-    try {
-     yield put ({type: 'UPDATE_SONG', payload: action.payload})
-      //const newData = yield call(Your-API-Method, id, data); // Refer sample to api calls in remote.js file
-      yield put ({type: 'UPDATE_SONG', payload: action.payload})
-    } catch {
-        console.log('error in update song ');
-      // Handle your errors here
-    }
-}
+// function* updateSong(action) {
+//     try {
+//      yield axios.put/api
+
+    
+//     } catch {
+//         console.log('error in update song ');
+//       // Handle your errors here
+//     }
+// }
 
 
 

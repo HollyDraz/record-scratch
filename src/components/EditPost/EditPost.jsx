@@ -3,7 +3,13 @@ import { useHistory, useParams } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+//mui 
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 
 function EditPost() {
@@ -33,25 +39,30 @@ const [newDescription, setNewDescription] = useState('');
 // include dispatch to update song deets
 // const new song  = { title: newTilte } 
 
-const updateSong = () => {
-    const newSong = {
-      title: newTitle,
-      artist: newArtist,
-      album: newAlbum,
-      description: newDescription
-    }
-    const dispatch = useDispatch();
-    dispatch({type: 'UPDATE_SONG', payload: newSong });
-    console.log('updated song', newSong) 
-  }
+const updateSong = (event) => {
+  //event.preventDefault();
+  console.log('In update song ');
+  axios.put(`/api/song/${song}`, 
+  { 
+    title: newTitle,
+    artist: newArtist,
+    album: newAlbum,
+    description: newDescription
 
-
+  })
+      .then(() => {
+          dispatch({ type: 'SET_SONG' });
+      }).catch((error) => {
+          console.log(error);
+          alert('Something went wrong!');
+      });
+};
 
     return (
       <div className="container">
         <div>
           <h1>Edit Post <br />
-            <button onClick={() => history.push('/homepage')}>Home Page</button>
+            <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
           <p>SONG: {JSON.stringify(song)}</p>
           </h1>
           <form >
@@ -63,10 +74,10 @@ const updateSong = () => {
           <input type="text" name="description" placeholder={song.description} />
           
           </form>
-          <button onClick={() => updateSong()} >Publish</button> <br />
+          <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
           
        
-          <button>DELETE</button>
+          <Button variant="contained" color='error'>DELETE</Button>
         </div>
       </div>
     );
