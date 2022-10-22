@@ -18,7 +18,7 @@ const [newTitle, setNewTitle] = useState('');
 const [newArtist, setNewArtist] = useState('');
 const [newAlbum, setNewAlbum] = useState('');
 const [newDescription, setNewDescription] = useState('');
-
+//const [newSong, setNewSong] = useState('');
 
 
 
@@ -34,7 +34,6 @@ const [newDescription, setNewDescription] = useState('');
 // const new song  = { title: newTilte } 
 
 const updateSong = () => {
-  console.log('in the update song')
     const newSong = {
       title: newTitle,
       artist: newArtist,
@@ -43,7 +42,7 @@ const updateSong = () => {
     }
     const dispatch = useDispatch();
     dispatch({type: 'UPDATE_SONG', payload: newSong });
-    console.log('updated song', newSong  ) 
+    console.log('updated song', newSong) 
   }
 
 
@@ -53,7 +52,7 @@ const updateSong = () => {
         <div>
           <h1>Edit Post <br />
             <button onClick={() => history.push('/homepage')}>Home Page</button>
-            {/* <p>SONG: {JSON.stringify(song)}</p> */}
+          <p>SONG: {JSON.stringify(song)}</p>
           </h1>
           <form >
             {/* on change handlers needed */}
@@ -62,8 +61,10 @@ const updateSong = () => {
           <input type="text" name="album" placeholder={song.album} />
           <input type="text" name="artist" placeholder={song.artist} />
           <input type="text" name="description" placeholder={song.description} />
+          
           </form>
           <button onClick={() => updateSong()} >Publish</button> <br />
+          
        
           <button>DELETE</button>
         </div>
