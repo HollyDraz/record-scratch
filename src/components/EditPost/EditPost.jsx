@@ -20,10 +20,10 @@ const song = useSelector (store => store.selectedSong);
 const dispatch = useDispatch();
 const {id} = useParams();
 // all my song details 
-const [newTitle, setNewTitle] = useState('');
-const [newArtist, setNewArtist] = useState('');
-const [newAlbum, setNewAlbum] = useState('');
-const [newDescription, setNewDescription] = useState('');
+const [newTitle, setNewTitle] = useState('yeet');
+const [newArtist, setNewArtist] = useState('x ');
+const [newAlbum, setNewAlbum] = useState(' x ');
+const [newDescription, setNewDescription] = useState(' x ');
 //const [newSong, setNewSong] = useState('');
 
 
@@ -40,9 +40,9 @@ const [newDescription, setNewDescription] = useState('');
 // const new song  = { title: newTilte } 
 
 const updateSong = (event) => {
-  //event.preventDefault();
+  //event.preventDefault()
   console.log('In update song ');
-  axios.put(`/api/song/${song}`, 
+  axios.put(`/api/song/${song.id}`, 
   { 
     title: newTitle,
     artist: newArtist,
@@ -51,10 +51,10 @@ const updateSong = (event) => {
 
   })
       .then(() => {
-          dispatch({ type: 'SET_SONG' });
+          dispatch({ type: 'UPDATE_SONG'});
       }).catch((error) => {
           console.log(error);
-          alert('Something went wrong!');
+          alert('Something went wrong in update song!');
       });
 };
 
@@ -75,6 +75,7 @@ const updateSong = (event) => {
           
           </form>
           <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
+          {/* //<input type='submit'/> */}
           
        
           <Button variant="contained" color='error'>DELETE</Button>

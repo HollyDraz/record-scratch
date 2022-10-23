@@ -34,22 +34,29 @@ router.post('/', (req, res) => {
   });
 
 //update the song post
-router.put('/id', (req, res) => {
-  let songId = req.params.id;
-  let songArtist = req.body.artist;
-  let songAlbum = req.body.album;
-  let songDescription = req.body.description;
-  console.log(req.body);
+router.put('/:id', (req, res) => {
+  // let songId = req.params.id;
+  // let songArtist = req.body.artist;
+  // let songAlbum = req.body.album;
+  // let songDescription = req.body.description;
+  console.log(req.body, req.params.id);
   const queryText = `UPDATE "song" SET 
-                    "title" =$1 , 
-                    "artist" =$2, 
-                    "album", =$3
-                    "description" =$4,
-                    WHERE id =${req.user.id} `;
-  pool.query(queryText, [songId, songArtist, songAlbum, songDescription])
+                    "title" = $1, 
+                    "artist" = $2, 
+                    "album" = $3,
+                    "description" = $4
+                    WHERE 'id' = $5; `;
+  pool.query(queryText, 
+    [req.body.title, 
+      req.body.artist, 
+      req.body.album, 
+      req.body.description, 
+      req.params.id])
       .then((results) => {
+        console.log('im working..i think?')
         res.sendStatus(200);
       }).catch((error) => {
+        console.log(error)
         res.sendStatus(500);
       });
 })
