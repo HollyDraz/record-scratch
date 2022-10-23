@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
                     "artist" = $2, 
                     "album" = $3,
                     "description" = $4
-                    WHERE 'id' = $5; `;
+                    WHERE "id" = $5; `;
   pool.query(queryText, 
     [req.body.title, 
       req.body.artist, 

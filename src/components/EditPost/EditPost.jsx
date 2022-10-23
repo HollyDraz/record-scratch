@@ -52,6 +52,8 @@ const updateSong = (event) => {
   })
       .then(() => {
           dispatch({ type: 'UPDATE_SONG'});
+          alert('your post was updated!');
+          history.push('/homepage')
       }).catch((error) => {
           console.log(error);
           alert('Something went wrong in update song!');
@@ -69,9 +71,9 @@ const updateSong = (event) => {
             {/* on change handlers needed */}
             {/* onChange={updateSong(song)}  */}
           <input onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> 
-          <input type="text" name="album" placeholder={song.album} />
-          <input type="text" name="artist" placeholder={song.artist} />
-          <input type="text" name="description" placeholder={song.description} />
+          <input onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} />
+          <input onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} />
+          <input onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           
           </form>
           <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
