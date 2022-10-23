@@ -63,24 +63,27 @@ const updateSong = (event) => {
     return (
       <div className="container">
         <div>
-          <h1>Edit Post <br />
-            <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
-          <p>SONG: {JSON.stringify(song)}</p>
+          <h1>Edit Post
+          {/* //<p>SONG: {JSON.stringify(song)}</p> */}
           </h1>
+          <Box>
+          <Card variant="outlined">
+          <CardContent>
           <form >
-            {/* on change handlers needed */}
-            {/* onChange={updateSong(song)}  */}
-          <input onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> 
-          <input onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} />
-          <input onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} />
+          <input onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
+          <input onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
+          <input onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
           <input onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           
           </form>
+          <CardActions>
           <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
-          {/* //<input type='submit'/> */}
-          
-       
+          <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
           <Button variant="contained" color='error'>DELETE</Button>
+          </CardActions>
+          </CardContent>
+          </Card>
+          </Box>
         </div>
       </div>
     );

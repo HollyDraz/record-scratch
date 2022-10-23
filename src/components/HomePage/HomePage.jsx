@@ -70,32 +70,6 @@ const bull = (
 );
 
 
-
-// const card = (
-//   <React.Fragment>
-//     <CardContent>
-//       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-//       {songList.map (song => {
-//             console.log('song list', songList);
-//             return<div key={song.id}>
-//               song: {song.title} <br />
-//               artist: {song.artist} <br />
-//               album: {song.album} <br />
-//               description: {song.description}
-
-//             </div>
-//           })}
-//       </Typography>
-//     </CardContent>
-
-//     <CardActions>
-//     <Button onClick={() => history.push('/edit')}>Edit post</Button>
-//     <FavoriteIcon />
-//     </CardActions>
-//   </React.Fragment>
-// );
-
-
     return (
       <div className="container">
         <div>
