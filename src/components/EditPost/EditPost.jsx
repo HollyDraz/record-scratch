@@ -85,19 +85,11 @@ const deleteSong = () => {
           <Card variant="outlined">
           <CardContent>
           <form >
-          <TextField
-          label={song.title}
-           onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
-          <TextField
-          label={song.album}
-           onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
-          <TextField
-          label={song.artist}
-           onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
+          <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
+          <TextField label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
+          <TextField label={song.artist} onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
           <TextField 
-          label={song.description}
-          multiline
-          rows={4}
+          label={song.description} multiline rows={4}
           onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           
           </form>

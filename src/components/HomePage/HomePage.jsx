@@ -72,6 +72,7 @@ const bull = (
         <div>
           <h1>Welcome To Record Scratch! <br />
           <Button variant="outlined" onClick={() => history.push('/create')}>Create Post</Button>
+          {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
           
       
           </h1>
@@ -84,14 +85,14 @@ const bull = (
               <Card variant="outlined">
                 <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="black" gutterBottom>
-                          song: {song.title} <br />
+                          <h3>{song.title} <br/> </h3>
                           artist: {song.artist} <br />
                           album: {song.album} <br />
                           description: {song.description}
                          </Typography>   
                           <CardActions>
                           <Button variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
-                          <FavoriteIcon />
+                          {/* <FavoriteIcon /> */}
                           </CardActions>
                 </CardContent>
               </Card>
