@@ -19,12 +19,12 @@ const history = useHistory();
 const song = useSelector (store => store.selectedSong);
 const dispatch = useDispatch();
 const {id} = useParams();
-// all my song details 
+// all my default song details 
 const [newTitle, setNewTitle] = useState(' x ');
 const [newArtist, setNewArtist] = useState('x ');
 const [newAlbum, setNewAlbum] = useState(' x ');
 const [newDescription, setNewDescription] = useState(' x ');
-//const [newSong, setNewSong] = useState('');
+
 
 
 
@@ -51,7 +51,6 @@ const updateSong = (event) => {
 
   })
       .then(() => {
-          dispatch({ type: 'UPDATE_SONG'});
           alert('your post was updated!');
           history.push('/homepage')
       }).catch((error) => {
@@ -60,10 +59,20 @@ const updateSong = (event) => {
       });
 };
 
-//new function to delete a slected post 
+//new function to delete a selected post 
 const deleteSong = () => {
-  console.log('delete song');
-};
+  axios({
+    method: 'DELETE',
+    url: `/api/song/delete/${song.id}`
+  }).then((response) => {
+    alert('your post was delete!');
+    history.push('/homepage');
+  }).catch((error) => {
+    console.log(error);
+    alert('Something went wrong!')
+  })
+}
+
 
     return (
       <div className="container">
@@ -84,7 +93,7 @@ const deleteSong = () => {
           <CardActions>
           <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
           <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
-          <Button variant="contained" onClick={() => deleteSong() } color='error'>DELETE</Button>
+          <Button variant="contained" onClick={() => deleteSong()} color='error'>DELETE</Button>
           </CardActions>
           </CardContent>
           </Card>

@@ -64,12 +64,12 @@ router.put('/:id', (req, res) => {
 // delete 
 router.delete('/delete/:id', (req, res) => {
   // if (req.isAuthenticated()) 
-  console.log('in the delete function');
-  
-    const queryText = `DELETE FROM "set" WHERE "song_id" = $1;`;
+  console.log('in my delete baybe')
+    const queryText = `DELETE FROM "song" WHERE "id" = $1;`;
      pool.query(queryText, [req.params.id])
      .then((result) => {
        res.sendStatus(200);
+       console.log('in the delete router')
          }).catch((error) => {
            console.log('error in delete ', error);
            res.sendStatus(500);
