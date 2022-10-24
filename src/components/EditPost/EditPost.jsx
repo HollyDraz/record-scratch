@@ -20,7 +20,7 @@ const song = useSelector (store => store.selectedSong);
 const dispatch = useDispatch();
 const {id} = useParams();
 // all my song details 
-const [newTitle, setNewTitle] = useState('yeet');
+const [newTitle, setNewTitle] = useState(' x ');
 const [newArtist, setNewArtist] = useState('x ');
 const [newAlbum, setNewAlbum] = useState(' x ');
 const [newDescription, setNewDescription] = useState(' x ');
@@ -60,6 +60,11 @@ const updateSong = (event) => {
       });
 };
 
+//new function to delete a slected post 
+const deleteSong = () => {
+  console.log('delete song');
+};
+
     return (
       <div className="container">
         <div>
@@ -79,7 +84,7 @@ const updateSong = (event) => {
           <CardActions>
           <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
           <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
-          <Button variant="contained" color='error'>DELETE</Button>
+          <Button variant="contained" onClick={() => deleteSong() } color='error'>DELETE</Button>
           </CardActions>
           </CardContent>
           </Card>

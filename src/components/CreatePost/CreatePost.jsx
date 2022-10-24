@@ -3,6 +3,16 @@ import { useHistory } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+//mui 
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Grid from '@mui/material/Grid';
+
 
 function CreatePost() {
   const history = useHistory();
@@ -38,15 +48,25 @@ function CreatePost() {
       <div className="container">
         <div>
           <h1>Create Post <br />
-            <button onClick={() => history.push('/homepage')}>Home Page</button>
+            
           </h1>
+          <Box>
+            <Card>
+              <CardContent>
+           
           <form onSubmit={createPost}>
-          <input onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' />
-          <input onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' />
-          <input onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' />
+          <input onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
+          <input onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
+          <input onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />
           <input onChange={(e) => setNewDescription(e.target.value)} defaultValue={newDescription} type="text" name="description" placeholder='description' />
           </form>
-          <button onClick={createPost}>Publish</button>
+          <CardActions>
+          <Button variant='contained' onClick={() => history.push('/homepage')}>Home Page</Button>
+          <Button variant='contained' onClick={createPost}>Publish</Button>
+          </CardActions>
+          </CardContent>
+          </Card>
+          </Box>
         </div>
       </div>
     );

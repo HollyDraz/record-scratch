@@ -6,7 +6,6 @@ import axios from 'axios'
 // mui imports 
 //move this card into its own components 
 //once base mode is complete
-
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -32,8 +31,6 @@ const {id} = useParams();
     console.log('song title test', song.title);
     history.push('/edit')
   }
-
-
 
 
 useEffect(() => {
@@ -93,9 +90,8 @@ const bull = (
                           description: {song.description}
                          </Typography>   
                           <CardActions>
-                            
-                            <Button variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
-                            <FavoriteIcon />
+                          <Button variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
+                          <FavoriteIcon />
                           </CardActions>
                 </CardContent>
               </Card>
