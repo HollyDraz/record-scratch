@@ -9,8 +9,10 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography';
 import { TextField } from '@mui/material';
+import Paper from '@mui/material/Paper';
 
 
 function EditPost() {
@@ -66,7 +68,7 @@ const deleteSong = () => {
     method: 'DELETE',
     url: `/api/song/delete/${song.id}`
   }).then((response) => {
-    alert('your post was delete!');
+    alert(`your post was deleted, hope that wasn't important!`);
     history.push('/homepage');
   }).catch((error) => {
     console.log(error);
@@ -78,17 +80,26 @@ const deleteSong = () => {
     return (
       <div className="container">
         <div>
-          <h1>Edit Post
+        <Typography align='center'><h1> Edit Post</h1>  </Typography>
           {/* //<p>SONG: {JSON.stringify(song)}</p> */}
-          </h1>
+        
+          <Grid
+             container
+             direction="column"
+             justifyContent="center"
+            alignItems="center"
+          >
+
+          
           <Box>
+          <Paper>
           <Card variant="outlined">
           <CardContent>
           <form >
-          <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
-          <TextField label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
-          <TextField label={song.artist} onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
-          <TextField 
+          Title: <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
+          Album: <TextField label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
+          Artist: <TextField label={song.artist} onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
+          Description: <TextField 
           label={song.description} multiline rows={4}
           onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           
@@ -100,7 +111,9 @@ const deleteSong = () => {
           </CardActions>
           </CardContent>
           </Card>
+          </Paper>
           </Box>
+          </Grid>
         </div>
       </div>
     );

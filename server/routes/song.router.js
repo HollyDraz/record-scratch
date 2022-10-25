@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     // Find all songs and return them 
-    pool.query('SELECT * FROM "song";').then((result) => {
+    pool.query('SELECT * FROM "song" ORDER BY "id" DESC;').then((result) => {
         res.send(result.rows);
     }).catch((error) => {
         console.log('Error GET /api/song', error);

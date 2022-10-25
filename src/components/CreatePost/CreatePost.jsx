@@ -10,9 +10,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
+import Paper from '@mui/material/Paper';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
+
+
 
 
 function CreatePost() {
@@ -22,6 +26,10 @@ function CreatePost() {
   const [newArtist, setNewArtist] = useState();
   const [newAlbum, setNewAlbum] = useState();
   const [newDescription, setNewDescription] = useState();
+
+
+
+
 
 
   const createPost = ( ) => {
@@ -48,18 +56,23 @@ function CreatePost() {
     return (
       <div className="container">
         <div>
-          <h1>Create Post <br />
-            
-          </h1>
+          <h1>Create Post </h1>
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+           alignItems="center"
+          >
           <Box>
-            <Card>
-              <CardContent>
+          <Paper>
+          <Card>
+          <CardContent>
            
           <form onSubmit={createPost}>
-          <TextField label='title' onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
-          <TextField label='album'  onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
-          <TextField label='artist'  onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />
-          <TextField label='description'    multiline
+          Title: <TextField label='title' onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
+          Album: <TextField label='album'  onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
+          Artist: <TextField label='artist'  onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />
+          Description: <TextField label='description'    multiline
           rows={4} onChange={(e) => setNewDescription(e.target.value)} defaultValue={newDescription} type="text" name="description" placeholder='description' />
           </form>
           <CardActions>
@@ -68,7 +81,9 @@ function CreatePost() {
           </CardActions>
           </CardContent>
           </Card>
+          </Paper>
           </Box>
+          </Grid>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from '@mui/material/Grid';
 
 function HomePage() {
@@ -70,14 +70,21 @@ const bull = (
     return (
       <div className="container">
         <div>
-          <h1>Welcome To Record Scratch! <br />
-          <Button variant="outlined" onClick={() => history.push('/create')}>Create Post</Button>
+          <Typography align='center'><h1> Welcome To Record Scratch!</h1> <br />
+          <Button variant="outlined" onClick={() => history.push('/create')}>Create Post</Button> <br/>
+          </Typography>
+          <br />
           {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
+         
           
-      
-          </h1>
           <Box sx={{ minWidth: 300 }}>
-          <Grid container spacing={0}> 
+          <Grid 
+           container
+           direction="column"
+           justifyContent="space-between"
+           alignItems="center"
+          
+          > 
           
           {songList.map (song => {
             console.log('song list', songList);
@@ -90,12 +97,13 @@ const bull = (
                           album: {song.album} <br />
                           description: {song.description}
                          </Typography>   
-                          <CardActions>
-                          <Button variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
+                          <CardActions >
+                          <Button  variant="outlined" onClick={() => handleSong(song)}>Edit post</Button>
                           {/* <FavoriteIcon /> */}
                           </CardActions>
                 </CardContent>
               </Card>
+              <br />
             </div>
           })}
           </Grid>
