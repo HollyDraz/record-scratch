@@ -46,6 +46,7 @@ function CreatePost() {
       }
     }).then((response) => {
       alert('new song created')
+      history.push('/homepage')
       console.log(response);
     }).catch(error => {
       console.log('error in create post', error);
@@ -65,7 +66,7 @@ function CreatePost() {
           >
           <Box>
           <Paper>
-          <Card>
+          <Card sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
           <CardContent>
            
           <form onSubmit={createPost}>

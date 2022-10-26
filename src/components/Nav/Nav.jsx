@@ -9,7 +9,7 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
+      <Link to="/home" >
         <h2 className="nav-title">Record Scratch </h2>
       </Link>
       <div>

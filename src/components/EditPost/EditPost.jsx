@@ -40,7 +40,7 @@ const [newDescription, setNewDescription] = useState(' x ');
 
 // new function to update the post 'update song'
 // include dispatch to update song deets
-// const new song  = { title: newTilte } 
+
 
 const updateSong = (event) => {
   //event.preventDefault()
@@ -83,17 +83,12 @@ const deleteSong = () => {
         <Typography align='center'><h1> Edit Post</h1>  </Typography>
           {/* //<p>SONG: {JSON.stringify(song)}</p> */}
         
-          <Grid
-             container
-             direction="column"
-             justifyContent="center"
-            alignItems="center"
-          >
+          <Grid container direction="column" justifyContent="center" alignItems="center">
 
           
           <Box>
           <Paper>
-          <Card variant="outlined">
+          <Card variant="outlined" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
           <CardContent>
           <form >
           Title: <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
@@ -105,8 +100,8 @@ const deleteSong = () => {
           
           </form>
           <CardActions>
-          <Button variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
-          <Button variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black' }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black' }} variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
           <Button variant="contained" onClick={() => deleteSong()} color='error'>DELETE</Button>
           </CardActions>
           </CardContent>
