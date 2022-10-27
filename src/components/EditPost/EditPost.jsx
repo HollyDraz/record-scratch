@@ -89,7 +89,7 @@ const deleteSong = () => {
           <Box>
           <Paper>
           <Card variant="outlined" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
-          <CardContent>
+          <CardContent >
           <form >
           Title: <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
           Album: <TextField label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
@@ -100,8 +100,8 @@ const deleteSong = () => {
           
           </form>
           <CardActions>
-          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black' }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
-          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black' }} variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
           <Button variant="contained" onClick={() => deleteSong()} color='error'>DELETE</Button>
           </CardActions>
           </CardContent>

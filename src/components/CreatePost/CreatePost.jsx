@@ -77,8 +77,8 @@ function CreatePost() {
           rows={4} onChange={(e) => setNewDescription(e.target.value)} defaultValue={newDescription} type="text" name="description" placeholder='description' />
           </form>
           <CardActions>
-          <Button variant='contained' onClick={() => history.push('/homepage')}>Home Page</Button>
-          <Button variant='contained' onClick={createPost}>Publish</Button>
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'} }} variant='contained' onClick={() => history.push('/homepage')}>Home Page</Button>
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant='contained' onClick={createPost}>Publish</Button>
           </CardActions>
           </CardContent>
           </Card>
