@@ -24,6 +24,7 @@ import EditPost from '../EditPost/EditPost';
 import CreatePost from '../CreatePost/CreatePost';
 import PersonalProfile from '../PersonalProfile/PersonalProfile';
 import HomePage from '../HomePage/HomePage';
+import Header from '../Header/Header';
 import './App.css';
 
 function App() {
@@ -39,13 +40,14 @@ function App() {
     <Router>
       <div>
         <Nav />
+        <Header />
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
 
           {/* Visiting localhost:3000/about will show the about page.
           <Route
-            // shows AboutPage at all times (logged in or not)
+            shows AboutPage at all times (logged in or not)
             exact
             path="/about">
             <AboutPage />

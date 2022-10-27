@@ -73,9 +73,10 @@ const bull = (
     return (
       <div className="container">
         <div>
-          <Typography align='center'><h1> Welcome To Record Scratch!</h1> <br />
+          <Typography align='center'> 
           <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/>
           </Typography>
+         
           <br />
           {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
          
