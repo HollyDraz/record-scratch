@@ -70,10 +70,10 @@ function CreatePost() {
           <CardContent>
            
           <form onSubmit={createPost}>
-          Title: <TextField label='title' onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
-          Album: <TextField label='album'  onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
-          Artist: <TextField label='artist'  onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />
-          Description: <TextField label='description'    multiline
+         <b> Title: </b> <TextField fullWidth label='title' onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
+         <b> Album: </b> <TextField  fullWidth label='album'  onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
+         <b> Artist: </b> <TextField fullWidth label='artist'  onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />
+         <b> Description: </b> <TextField fullWidth label='description'    multiline
           rows={4} onChange={(e) => setNewDescription(e.target.value)} defaultValue={newDescription} type="text" name="description" placeholder='description' />
           </form>
           <CardActions>

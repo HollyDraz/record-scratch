@@ -89,15 +89,12 @@ const deleteSong = () => {
           <Box>
           <Paper>
           <Card variant="outlined" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
-          <CardContent >
+          <CardContent sx={{}} >
           <form >
-          Title: <TextField label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
-          Album: <TextField label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
-          Artist: <TextField label={song.artist} onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
-          Description: <TextField 
-          label={song.description} multiline rows={4}
-          onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
-          
+           <b>Title: </b> <TextField fullWidth label={song.title} onChange={(e) => setNewTitle(e.target.value)} type="text" name="song" placeholder={song.title} /> <br/>
+           <b>Album: </b> <TextField fullWidth label={song.album} onChange={(e) => setNewAlbum(e.target.value)} type="text" name="album" placeholder={song.album} /> <br/>
+           <b>Artist: </b> <TextField fullWidth label={song.artist} onChange={(e) => setNewArtist(e.target.value)} type="text" name="artist" placeholder={song.artist} /> <br/>
+          <b>Description: </b> <TextField fullWidth label={song.description} multiline rows={4} onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           </form>
           <CardActions>
           <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />

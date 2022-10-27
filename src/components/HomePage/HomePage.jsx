@@ -86,8 +86,7 @@ const bull = (
            direction="column"
            justifyContent="space-between"
            alignItems="center"
-          
-          > 
+           > 
           
           {songList.map (song => {
             console.log('song list', songList);
