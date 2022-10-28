@@ -74,7 +74,7 @@ const bull = (
       <div className="container">
         <div>
           <Typography align='center'> 
-          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/>
+          {/* <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/> */}
           </Typography>
          
           <br />
@@ -94,14 +94,16 @@ const bull = (
             return<div key={song.id}>
               <Card variant="contained" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
                 <CardContent>
-                        <Typography sx={{ fontSize: 14 }} color="black" gutterBottom>
+                        <Typography sx={{ fontSize: 15 }} color="black" gutterBottom>
                           <h3>{song.title} <br/> </h3>
-                          artist: {song.artist} <br />
-                          album: {song.album} <br />
-                          description: {song.description}
+                          {/* User: {user.username} <br /> */}
+                          <p> Artist:  {song.artist} <br />
+                          Album: {song.album} <br />
+                          Description: {song.description}
+                          </p>
                          </Typography>   
                           <CardActions >
-                          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
+                          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#193a52'}  }} variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
                           {/* <FavoriteIcon /> */}
                           </CardActions>
                 </CardContent>

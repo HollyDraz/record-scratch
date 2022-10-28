@@ -57,7 +57,7 @@ function CreatePost() {
     return (
       <div className="container">
         <div>
-          <h1>Create Post </h1>
+          <Typography align='center'><h1>Create Post </h1></Typography>
           <Grid
             container
             direction="column"
