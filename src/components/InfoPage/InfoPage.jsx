@@ -26,16 +26,21 @@ function InfoPage() {
         I also want to add some social aspects such as saving another persons song to your own personal profile.
         </p>
       </Typography>
+      <br />
 
-      <Typography align='center'> <h1>Special thanks:</h1> 
-      <p> Thanks to all my friends, family, and loved ones. 
-        <br />Special thanks to Prime Digital Academy and Chris Black for providing me the skills to achieve this. 
+
+      <Typography align='center'> <h1>Shout Out To:</h1> 
+
+      <p> Special thanks to Prime Digital Academy and Chris Black for providing me the skills to achieve this. <br />
+        Thanks to all my friends, family and my roommate who helped test my app. 
         <br/> My mentors, and my dog Dash.   </p>
         <img src='dash.jpg' height='300' width='300'></img>
       </Typography>
 
       <Typography align='center'> <h1> Lets Stay in Touch! </h1>
-      <img src='linkedin.jpeg' height='400' width='400' />
+      <img src='linkedin.jpeg' height='200' width='200' />
+      <p>https://www.linkedin.com/in/hollydr/</p>
+      <p>https://github.com/HollyDraz</p>
       </Typography>
      
 

@@ -4,6 +4,10 @@ body,
   height: 100%;
 }
 
+/* .container{ 
+  /* background-color: #A3AFBF; */
+
+
 .login {
   background-image: url("https://images.pexels.com/photos/6865917/pexels-photo-6865917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
