@@ -45,7 +45,7 @@ function CreatePost() {
         description: newDescription
       }
     }).then((response) => {
-      alert('new song created')
+      alert('Your post is live!')
       history.push('/homepage')
       console.log(response);
     }).catch(error => {
@@ -67,9 +67,8 @@ function CreatePost() {
           <Box>
           <Paper>
           <Card sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
-          <CardContent>
-           
-          <form onSubmit={createPost}>
+          <CardContent> 
+        <form onSubmit={createPost}>
          <b> Title: </b> <TextField fullWidth label='title' onChange={(e) => setNewTitle(e.target.value)} defaultValue={newTitle} type="text" name="song" placeholder='song' /> <br />
          <b> Album: </b> <TextField  fullWidth label='album'  onChange={(e) => setNewAlbum(e.target.value)} defaultValue={newAlbum} type="text" name="album" placeholder='album' /> <br />
          <b> Artist: </b> <TextField fullWidth label='artist'  onChange={(e) => setNewArtist(e.target.value)} defaultValue={newArtist} type="text" name="artist" placeholder='artist' /> <br />

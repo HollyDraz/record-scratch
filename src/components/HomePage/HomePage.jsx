@@ -4,14 +4,13 @@ import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 // mui imports 
-//move this card into its own components 
-//once base mode is complete
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from '@mui/material/Grid';
 
@@ -86,13 +85,13 @@ const bull = (
            container
            direction="column"
            justifyContent="space-between"
-           alignItems="center"
-           > 
-          
+           alignItems="center"> 
+  
           {songList.map (song => {
             console.log('song list', songList);
             return<div key={song.id}>
-              <Card variant="contained" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>
+              <Card variant="contained" 
+              sx={{border: "10px  maroon double ",  borderRadius: "10px", backgroundColor: "white"}}>
                 <CardContent>
                         <Typography sx={{ fontSize: 15 }} color="black" gutterBottom>
                           <h3>{song.title} <br/> </h3>
@@ -102,6 +101,7 @@ const bull = (
                           Description: {song.description}
                           </p>
                          </Typography>   
+                         <Divider   sx={{border: "2px  black double ",  borderRadius: "90px" }}/>
                           <CardActions >
                           <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#193a52'}  }} variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
                           {/* <FavoriteIcon /> */}

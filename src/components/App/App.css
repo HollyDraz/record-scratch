@@ -4,6 +4,13 @@ body,
   height: 100%;
 }
 
+.login {
+  background-image: url("https://images.pexels.com/photos/6865917/pexels-photo-6865917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 body {
   font-family: "Audiowide", sans-serif;
   margin: 0px;
@@ -23,6 +30,11 @@ h3 {
 p {
   font-family: "Audiowide", sans-serif;
  }
+
+ li {
+  font-family: "Audiowide", sans-serif;
+ }
+
 
 img {
   display: inline-block;
@@ -47,7 +59,7 @@ Button
   border-color: #014041;
   border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color: #00acb0;
+  background-color: #b00000dd;
   color: #f8f8f8;
   font-size: 1.1rem;
   outline: 0;
@@ -70,7 +82,7 @@ Button
 }
 
 .btn:hover {
-  background-color: #008183;
+  background-color: #000d83;
   text-decoration: none;
 }
 
