@@ -4,8 +4,22 @@ body,
   height: 100%;
 }
 
-/* .container{ 
-  /* background-color: #A3AFBF; */
+.rotate {
+  
+
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.container{ 
+  background-color: #A3AFBF;
+}
 
 
 .login {
@@ -22,10 +36,12 @@ body {
 
 h1 {
   font-family: "Audiowide", sans-serif;
+  text-shadow: 5px 5px 10px white;
 
 }
 h2 {
   font-family: "Audiowide", sans-serif;
+  text-shadow: 5px 5px 10px white;
 }
 
 h3 {
@@ -94,11 +110,11 @@ Button
 .btn_asLink {
   padding: 0;
   border-width: 0;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid rgb(249, 244, 244);
   border-radius: 0;
   background: none;
   font: inherit;
-  color: #444;
+  color: rgb(255, 247, 247);
 }
 
 .btn_asLink:hover {

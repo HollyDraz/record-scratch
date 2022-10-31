@@ -4,7 +4,6 @@ import {useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 //
-
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -71,6 +70,7 @@ function PersonalProfile() {
         <div className="container">
           <div>
             <Typography align='center'> 
+            <h1>  </h1>
             {/* <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/> */}
             </Typography>
            
