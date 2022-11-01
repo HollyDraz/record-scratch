@@ -4,7 +4,8 @@ Record Scratch was created to provided users the ability to share and see new mu
 
 ## ScreenShots
 ![HomePage](public/homepage.png)
-
+![Create](public/create.png)
+![Edit](public/edit.png)
 
 
 
