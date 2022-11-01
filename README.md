@@ -40,5 +40,5 @@ Begin by creating a database titled "prime_app" After database is created user c
 
 ## Acknowledgments:
 
-Thank you to Prime Academy for equipping us with the information to make this app a reality. As well as my parents for always letting me talk about my passion for music even if they thought my music taste was odd.
+Thank you to Prime Academy for equipping us with the information to make this app a reality. My teacher Chris Black for taking the time to teach me. My parents for always letting me talk about my passion for music even if they thought my music taste was odd.
 
