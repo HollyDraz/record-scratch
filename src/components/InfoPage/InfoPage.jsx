@@ -1,11 +1,6 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-// This is one of our simplest components
-// It doesn't have local state
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is
-
 function InfoPage() {
   return (
     <div className="container">
@@ -28,10 +23,8 @@ function InfoPage() {
       </Typography>
       <br />
 
-
       <Typography align='center'> <h1>Shout Out To:</h1> 
-
-      <p> Special thanks to Prime Digital Academy and Chris Black for providing me the skills to achieve this. <br />
+      <p> Special thanks to Prime Digital Academy, Chris Black for providing me the skills to achieve this. <br />
         Thanks to all my friends, family and my roommate who helped test my app. 
         <br/> My mentors, and my dog Dash.   </p>
         <img src='dash.jpg' height='300' width='300'></img>
@@ -42,8 +35,6 @@ function InfoPage() {
       <p>https://www.linkedin.com/in/hollydr/</p>
       <p>https://github.com/HollyDraz</p>
       </Typography>
-     
-
     </div>
   );
 }

@@ -16,7 +16,7 @@ import Paper from '@mui/material/Paper';
 
 
 function EditPost() {
-const store = useSelector(store => store);//give the entire store
+const store = useSelector(store => store);
 const history = useHistory();
 //selectors and dispatch
 const song = useSelector (store => store.selectedSong);
@@ -39,8 +39,6 @@ const [newDescription, setNewDescription] = useState(' x ');
   
 
 // new function to update the post 'update song'
-// include dispatch to update song deets
-
 
 const updateSong = (event) => {
   //event.preventDefault()
@@ -81,11 +79,9 @@ const deleteSong = () => {
       <div className="container">
         <div>
         <Typography align='center'><h1> Edit Post</h1>  </Typography>
+        {/* used to test the new data being added */}
           {/* //<p>SONG: {JSON.stringify(song)}</p> */}
-        
           <Grid container direction="column" justifyContent="center" alignItems="center">
-
-          
           <Box>
           <Paper>
           <Card variant="outlined" sx={{border: "10px  maroon double ",  borderRadius: "10px" }}>

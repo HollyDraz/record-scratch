@@ -17,8 +17,6 @@ import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
 
 
-
-
 function CreatePost() {
   const history = useHistory();
   const dispatch = useDispatch();
@@ -27,14 +25,10 @@ function CreatePost() {
   const [newAlbum, setNewAlbum] = useState();
   const [newDescription, setNewDescription] = useState();
 
-
-
-
-
-
   const createPost = ( ) => {
     console.log('in create post', newTitle, newArtist, newArtist, newAlbum);
   
+    // allows user to create a new post 
     axios({
       method: 'POST',
       url: 'api/song',
@@ -52,7 +46,6 @@ function CreatePost() {
       console.log('error in create post', error);
     })
   }
-
 
     return (
       <div className="container">

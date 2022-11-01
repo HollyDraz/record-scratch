@@ -8,8 +8,6 @@ Record Scratch was created to provided users the ability to share and see new mu
 ![Edit](public/edit.png)
 
 
-
-
 # Prerequisites: 
 - Node.js 
 - Nodemon 
@@ -27,7 +25,6 @@ Begin by creating a database titled "prime_app" After database is created user c
 3. User can select the record labeled "create" and can view the create page
 
 4. On the  create page user will be prompted to enter information for their song of choice 
-
 
 5. Once the user hit post the post will be added to the database and will also appear on the homepage 
 

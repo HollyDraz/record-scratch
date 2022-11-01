@@ -11,7 +11,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from '@mui/material/Grid';
 
 function HomePage() {
@@ -52,6 +51,7 @@ function HomePage() {
     <div className="container">
       <div>
         <Typography align='center'> 
+        {/* Testing button layouts  */}
         {/* <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/> */}
         </Typography>
         
@@ -72,6 +72,7 @@ function HomePage() {
                   <CardContent>
                     <Typography sx={{ fontSize: 15 }} color="black" gutterBottom>
                       <h3>{song.title} <br/> </h3>
+                      {/* stretch goal to add profile for users to visit */}
                       {/* User: {user.username} <br /> */}
                       <p> Artist:  {song.artist} <br />
                       Album: {song.album} <br />
@@ -81,7 +82,6 @@ function HomePage() {
                     <Divider   sx={{border: "2px  black double ",  borderRadius: "90px" }}/>
                     <CardActions >
                     <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#193a52'}  }} variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
-                    {/* <FavoriteIcon /> */}
                     </CardActions>
                   </CardContent>
                 </Card>
