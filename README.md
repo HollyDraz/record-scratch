@@ -1,6 +1,12 @@
 
 # Record Scratch 
-This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
+Record Scratch was created to provided users the ability to share and see new music recommendations from your friends and family! Users can create, edit, delete, and read posts that may help you find your next new favorite song! 
+
+## ScreenShots
+![HomePage]("homepage.png" )
+
+
+
 
 
 # Prerequisites: 
