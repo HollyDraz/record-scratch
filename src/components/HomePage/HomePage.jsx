@@ -85,7 +85,7 @@ function HomePage() {
                     </Typography>   
                     <Divider   sx={{border: "2px  black double ",  borderRadius: "90px" }}/>
                     <CardActions >
-                    <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#193a52'}  }} variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
+                    <Button variant="contained" onClick={() => handleSong(song)}>Edit post</Button>
                     </CardActions>
                   </CardContent>
                 </Card>
