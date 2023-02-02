@@ -27,7 +27,7 @@ function Header(){
             <img class="rotate" src="record3.png" width="200" height="200" onClick={() => history.push('/homepage')}/>
             </Typography>
 
-            <Typography align='center'> <h2>Log Out</h2> 
+            <Typography align='center'> <h2>Profile</h2> 
             <img class="rotate" src="scratch.png" width="200" height="200" onClick={() => history.push('/profile')}/>
             </Typography>
         </Grid>

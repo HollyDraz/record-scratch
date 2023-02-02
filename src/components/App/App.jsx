@@ -7,12 +7,9 @@ import {
 } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -26,10 +23,22 @@ import PersonalProfile from '../PersonalProfile/PersonalProfile';
 import HomePage from '../HomePage/HomePage';
 import Header from '../Header/Header';
 import './App.css';
+// importing the theme for app 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
+const theme = createTheme ({
+  palette: {
+    primary: {
+      main: '#9e1922'
+    }
+  }
+
+})
 
 function App() {
   const dispatch = useDispatch();
-
   const user = useSelector(store => store.user);
 
   useEffect(() => {
@@ -37,6 +46,7 @@ function App() {
   }, [dispatch]);
 
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <div>
         <Nav />
@@ -141,6 +151,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
