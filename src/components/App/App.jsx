@@ -24,16 +24,21 @@ import HomePage from '../HomePage/HomePage';
 import Header from '../Header/Header';
 import './App.css';
 // importing the theme for app 
-import { createTheme } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-const theme = createTheme {
-  
-}
+
+const theme = createTheme ({
+  palette: {
+    primary: {
+      main: '#fefefe'
+    }
+  }
+
+})
 
 function App() {
   const dispatch = useDispatch();
-
   const user = useSelector(store => store.user);
 
   useEffect(() => {
@@ -41,6 +46,7 @@ function App() {
   }, [dispatch]);
 
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <div>
         <Nav />
@@ -145,6 +151,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
