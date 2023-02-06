@@ -25,14 +25,16 @@ import Header from '../Header/Header';
 import './App.css';
 // importing the theme for app 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import SideNav from '../SideNav/SideNav';
+
 
 
 
 const theme = createTheme ({
   palette: {
     primary: {
-      main: '#9e1922'
-    }
+      main: '#990033'
+    },
   }
 
 })
@@ -51,6 +53,7 @@ function App() {
       <div>
         <Nav />
         <Header />
+        <SideNav />
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />

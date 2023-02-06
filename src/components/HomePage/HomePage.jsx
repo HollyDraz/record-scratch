@@ -72,7 +72,7 @@ function HomePage() {
               console.log('song list', songList);
               return<div key={song.id}>
                 <Card variant="contained" 
-                sx={{border: "10px  maroon double ",  borderRadius: "10px", backgroundColor: "white"}}>
+                sx={{border: "10px  maroon double ",  borderRadius: "10px"}}>
                   <CardContent>
                     <Typography sx={{ fontSize: 15 }} color="black" gutterBottom>
                       <h3>{song.title} <br/> </h3>
