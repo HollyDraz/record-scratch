@@ -6,46 +6,76 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogOutButton from '../LogOutButton/LogOutButton';
+import { Button } from '@mui/material';
 import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 
 // function 
 
-
-const drawerWidth = 240;
-
-function SideNav(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+function SideNav({drawerWidth = 200}) {
+    //const history = useHistory();
+    //const dispatch = useDispatch();
   
-  }
-};
-
-const drawer = (
-    <div>
-        <Toolbar/>
-        <Divider/>
+      return(
+      // <Box sx={{ display: 'flex',}}>
+      // <CssBaseline />
+  
+      <Drawer
+        PaperProps={{sx: {backgroundColor: '#222', padding: '20px'}}}
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
+          
+        }}
+        variant="permanent"
+        anchor="left"
+      >
+  
+        
+  
         <List>
+            <ListItem >
             
-        </List>
-
-
-    </div>
-)
+            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined' onClick={() => history.push('/home')}> Home </Button>
+  
+            </ListItem>
+  
+            <ListItem >
+            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined' onClick={() => history.push('/reports')}>Reports</Button>
+            </ListItem>
+  
+            <ListItem>
+            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Log out </Button>
+            </ListItem>
+  
+            </List>
+  
+        <Divider />
+      </Drawer>
+    //   <Box
+    //     component="main"
+    //     sx={{ flexGrow: 1, p: 3 }}>
+    //     <Toolbar />
+    //     <Typography paragraph>
+          
+    //    </Typography>     
+    //   </Box>
+    // </Box>
+      );
+   }
+  
 
 
 export default SideNav;
