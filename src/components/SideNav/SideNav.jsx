@@ -25,11 +25,9 @@ function SideNav({drawerWidth = 200}) {
     //const dispatch = useDispatch();
   
       return(
-      // <Box sx={{ display: 'flex',}}>
-      // <CssBaseline />
-  
+
       <Drawer
-        PaperProps={{sx: {backgroundColor: '#222', padding: '20px'}}}
+        PaperProps={{ padding: '20px'}}
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -48,16 +46,16 @@ function SideNav({drawerWidth = 200}) {
         <List>
             <ListItem >
             
-            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined' onClick={() => history.push('/home')}> Home </Button>
+            <Button  variant='outlined' onClick={() => history.push('/home')}> Home </Button>
   
             </ListItem>
   
             <ListItem >
-            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined' onClick={() => history.push('/reports')}>Reports</Button>
+            <Button  variant='outlined' onClick={() => history.push('/reports')}>Reports</Button>
             </ListItem>
   
             <ListItem>
-            <Button style={{color:'grey', borderColor:'GrayText'}} variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Log out </Button>
+            <Button  variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Log out </Button>
             </ListItem>
   
             </List>
