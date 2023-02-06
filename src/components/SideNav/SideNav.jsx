@@ -3,6 +3,8 @@
 
 
 //imports here 
+import { useHistory, useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogOutButton from '../LogOutButton/LogOutButton';
@@ -21,8 +23,8 @@ import Typography from '@mui/material/Typography';
 // function 
 
 function SideNav({drawerWidth = 200}) {
-    //const history = useHistory();
-    //const dispatch = useDispatch();
+    const history = useHistory();
+    const dispatch = useDispatch();
   
       return(
 
@@ -45,17 +47,24 @@ function SideNav({drawerWidth = 200}) {
   
         <List>
             <ListItem >
-            
-            <Button  variant='outlined' onClick={() => history.push('/home')}> Home </Button>
+            <img class="rotate" src="record1.png" width="80" height="80" onClick={() => history.push('/info')}/>
+            <Button  variant='outlined' onClick={() => history.push('/home')}> About </Button>
   
             </ListItem>
   
             <ListItem >
-            <Button  variant='outlined' onClick={() => history.push('/reports')}>Reports</Button>
+            <img class="rotate" src="record1.png" width="80" height="80" onClick={() => history.push('/create')}/>
+            <Button  variant='outlined' onClick={() => history.push('/create')}>Reports</Button>
             </ListItem>
   
             <ListItem>
+            <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
             <Button  variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Log out </Button>
+            </ListItem>
+
+            <ListItem>
+            <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
+            <Button  variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Profile </Button>
             </ListItem>
   
             </List>
