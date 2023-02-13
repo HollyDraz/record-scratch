@@ -59,10 +59,11 @@ function App() {
     <Router>
       {/* <Box sx={{ height: 300, width: 1400}}> */}
       <Box   
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      minHeight="100vh">
+      // display="flex"
+      // justifyContent="center"
+      // alignItems="center"
+      // minHeight="100vh" 
+      >
 
 
       <div>
