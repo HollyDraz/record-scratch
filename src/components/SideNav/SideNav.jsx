@@ -47,39 +47,29 @@ function SideNav({drawerWidth = 200}) {
   
         <List>
             <ListItem >
-            <img class="rotate" src="record1.png" width="80" height="80" onClick={() => history.push('/info')}/>
-            <Button  variant='outlined' onClick={() => history.push('/home')}> About </Button>
-  
+            <img class="rotate" src="record1.png" width="80" height="80"/>
+            <Button  variant='outlined' onClick={() => history.push('/home')}> Home </Button>
             </ListItem>
   
             <ListItem >
-            <img class="rotate" src="record1.png" width="80" height="80" onClick={() => history.push('/create')}/>
-            <Button  variant='outlined' onClick={() => history.push('/create')}>Reports</Button>
+            <img class="rotate" src="record1.png" width="80" height="80"/>
+            <Button  variant='outlined' onClick={() => history.push('/create')}>Create</Button>
             </ListItem>
   
             <ListItem>
-            <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
+            <img class="rotate" src="scratch.png" width="80" height="80" />
             <Button  variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Log out </Button>
             </ListItem>
 
             <ListItem>
             <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
-            <Button  variant='outlined'   onClick={() => dispatch({ type: 'LOGOUT' })}>Profile </Button>
+            <Button  variant='outlined'   onClick={() => history.push('/create')}>Profile </Button>
             </ListItem>
   
             </List>
   
         <Divider />
       </Drawer>
-    //   <Box
-    //     component="main"
-    //     sx={{ flexGrow: 1, p: 3 }}>
-    //     <Toolbar />
-    //     <Typography paragraph>
-          
-    //    </Typography>     
-    //   </Box>
-    // </Box>
       );
    }
   

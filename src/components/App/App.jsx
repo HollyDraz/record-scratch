@@ -11,6 +11,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
+import Box from '@mui/material/Box';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
@@ -21,7 +22,7 @@ import EditPost from '../EditPost/EditPost';
 import CreatePost from '../CreatePost/CreatePost';
 import PersonalProfile from '../PersonalProfile/PersonalProfile';
 import HomePage from '../HomePage/HomePage';
-import Header from '../Header/Header';
+//import Header from '../Header/Header';
 import './App.css';
 // importing the theme for app 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -29,17 +30,23 @@ import SideNav from '../SideNav/SideNav';
 
 
 
+const drawerWidth = 200;
+
 
 const theme = createTheme ({
   palette: {
     primary: {
       main: '#990033'
     },
+    secondary: {
+      main: '#6699ff'
+    },
   }
 
 })
 
 function App() {
+
   const dispatch = useDispatch();
   const user = useSelector(store => store.user);
 
@@ -50,9 +57,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <Router>
+      <Box sx={{ display: 'flex' }}>
       <div>
         <Nav />
-        <Header />
+        {/* <Header /> */}
         <SideNav />
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
@@ -153,6 +161,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
+      </Box>
     </Router>
     </ThemeProvider>
   );
