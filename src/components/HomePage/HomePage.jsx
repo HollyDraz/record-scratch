@@ -62,12 +62,13 @@ function HomePage() {
         <br />
         {/* Stretch goal for profile is not implemented */}
         {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
-        <Box sx={{ minWidth: 300 }}>
+        <Box>
           <Grid 
-            container
-            direction="column"
-            justifyContent="space-between"
-            alignItems="center"> 
+          container 
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          > 
             {songList.map (song => {
               console.log('song list', songList);
               return<div key={song.id}>
