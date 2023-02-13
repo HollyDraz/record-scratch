@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import Nav from '../Nav/Nav';
+//import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
@@ -57,9 +57,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <Router>
-      <Box sx={{ display: 'flex' }}>
+      {/* <Box sx={{ height: 300, width: 1400}}> */}
+      <Box   
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      minHeight="100vh">
+
+
       <div>
-        <Nav />
+        {/* this was the original header  */}
+        {/* <Nav /> */}
         {/* <Header /> */}
         <SideNav />
         <Switch>
