@@ -62,8 +62,11 @@ function HomePage() {
         <br />
         {/* Stretch goal for profile is not implemented */}
         {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
-        <Box sx={{ minWidth: 300 }}>
+        <Box>
           <Grid 
+          display="flex"
+          flex={3}
+          flexDirection={{ xs: "column", sm: "row" }}
             container
             direction="column"
             justifyContent="space-between"
