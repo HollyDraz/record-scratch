@@ -7,7 +7,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LogOutButton from '../LogOutButton/LogOutButton';
 import { Button } from '@mui/material';
 import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
@@ -22,7 +21,7 @@ import Typography from '@mui/material/Typography';
 
 // function 
 
-function SideNav({drawerWidth = 200}) {
+function SideNav({drawerWidth = 170}) {
     const history = useHistory();
     const dispatch = useDispatch();
   
