@@ -36,10 +36,12 @@ const drawerWidth = 200;
 const theme = createTheme ({
   palette: {
     primary: {
-      main: '#990033'
+      main: '#556B2F'
     },
+    // this is currently affecting the color of buttons 
+    // on create and edit on highlight
     secondary: {
-      main: '#6699ff'
+      main: '#008080'
     },
   }
 
