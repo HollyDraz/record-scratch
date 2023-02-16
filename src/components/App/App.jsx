@@ -27,10 +27,23 @@ import './App.css';
 // importing the theme for app 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SideNav from '../SideNav/SideNav';
+//import { ThemeOptions } from '@mui/material/styles';
 
 
 
 const drawerWidth = 200;
+
+// export const themeOptions: ThemeOptions = {
+//   palette: {
+//     mode: 'light',
+//     primary: {
+//       main: '#3f51b5',
+//     },
+//     secondary: {
+//       main: '#f50057',
+//     },
+//   },
+// };
 
 
 const theme = createTheme ({
