@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 //import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import AboutPage from '../AboutPage/AboutPage';
+//import AboutPage from '../AboutPage/AboutPage';
 import Box from '@mui/material/Box';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -27,19 +27,34 @@ import './App.css';
 // importing the theme for app 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SideNav from '../SideNav/SideNav';
+//import { ThemeOptions } from '@mui/material/styles';
 
 
 
 const drawerWidth = 200;
 
+// export const themeOptions: ThemeOptions = {
+//   palette: {
+//     mode: 'light',
+//     primary: {
+//       main: '#3f51b5',
+//     },
+//     secondary: {
+//       main: '#f50057',
+//     },
+//   },
+// };
+
 
 const theme = createTheme ({
   palette: {
     primary: {
-      main: '#990033'
+      main: '#556B2F'
     },
+    // this is currently affecting the color of buttons 
+    // on create and edit on highlight
     secondary: {
-      main: '#6699ff'
+      main: '#008080'
     },
   }
 
