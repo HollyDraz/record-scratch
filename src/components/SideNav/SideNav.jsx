@@ -28,7 +28,7 @@ function SideNav({drawerWidth = 170}) {
       return(
 
       <Drawer
-        PaperProps={{ padding: '20px'}}
+        PaperProps={{ sx: { borderRightWidth: 2, padding: '0px' } }}
         sx={{
           width: drawerWidth,
           flexShrink: 0,
