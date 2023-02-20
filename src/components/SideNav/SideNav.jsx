@@ -6,18 +6,18 @@
 import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { useSelector } from 'react-redux';
-import Box from '@mui/material/Box';
+//import { useSelector } from 'react-redux';
+//import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+//import CssBaseline from '@mui/material/CssBaseline';
+//import AppBar from '@mui/material/AppBar';
+//import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import Typography from '@mui/material/Typography';
+//import Typography from '@mui/material/Typography';
 
 // function 
 
@@ -62,7 +62,7 @@ function SideNav({drawerWidth = 170}) {
 
             <ListItem>
             <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
-            <Button  variant='outlined'   onClick={() => history.push('/create')}>Profile </Button>
+            <Button  variant='outlined'   onClick={() => history.push('/profile')}>Profile </Button>
             </ListItem>
   
             </List>

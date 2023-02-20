@@ -33,19 +33,6 @@ import SideNav from '../SideNav/SideNav';
 
 const drawerWidth = 200;
 
-// export const themeOptions: ThemeOptions = {
-//   palette: {
-//     mode: 'light',
-//     primary: {
-//       main: '#3f51b5',
-//     },
-//     secondary: {
-//       main: '#f50057',
-//     },
-//   },
-// };
-
-
 const theme = createTheme ({
   palette: {
     primary: {
@@ -54,7 +41,7 @@ const theme = createTheme ({
     // this is currently affecting the color of buttons 
     // on create and edit on highlight
     secondary: {
-      main: '#008080'
+      main: '#556B2F'
     },
   }
 

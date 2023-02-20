@@ -93,8 +93,8 @@ const deleteSong = () => {
           <b>Description: </b> <TextField fullWidth label={song.description} multiline rows={4} onChange={(e) => setNewDescription(e.target.value)} type="text" name="description" placeholder={song.description} />
           </form>
           <CardActions>
-          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
-          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black', '&: hover': {backgroundColor: '#c4dce5'}  }} variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black'  }} variant='contained' onClick={() => updateSong()} >Publish</Button> <br />
+          <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black' }} variant="contained" onClick={() => history.push('/homepage')}>Home Page</Button>
           <Button variant="contained" onClick={() => deleteSong()} color='error'>DELETE</Button>
           </CardActions>
           </CardContent>
