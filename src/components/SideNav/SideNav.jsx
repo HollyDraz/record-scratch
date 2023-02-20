@@ -62,7 +62,7 @@ function SideNav({drawerWidth = 170}) {
 
             <ListItem>
             <img class="rotate" src="scratch.png" width="80" height="80" onClick={() => history.push('/profile')}/>
-            <Button  variant='outlined'   onClick={() => history.push('/create')}>Profile </Button>
+            <Button  variant='outlined'   onClick={() => history.push('/profile')}>Profile </Button>
             </ListItem>
   
             </List>
