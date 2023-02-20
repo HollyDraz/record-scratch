@@ -54,7 +54,7 @@ const theme = createTheme ({
     // this is currently affecting the color of buttons 
     // on create and edit on highlight
     secondary: {
-      main: '#008080'
+      main: '#556B2F'
     },
   }
 
