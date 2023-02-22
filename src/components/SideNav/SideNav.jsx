@@ -17,6 +17,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
+import { blue } from '@mui/material/colors';
 //import Typography from '@mui/material/Typography';
 
 // function 
@@ -28,10 +29,11 @@ function SideNav({drawerWidth = 170}) {
       return(
 
       <Drawer
-        PaperProps={{ sx: { borderRightWidth: 2, padding: '0px' } }}
+        PaperProps={{ sx: { borderRightWidth: 5, padding: '0px' } }}
         sx={{
+          
           width: drawerWidth,
-          flexShrink: 0,
+          flexShrink: 100,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
