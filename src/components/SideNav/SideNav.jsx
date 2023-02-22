@@ -31,7 +31,7 @@ function SideNav({drawerWidth = 170}) {
         PaperProps={{ sx: { borderRightWidth: 2, padding: '0px' } }}
         sx={{
           width: drawerWidth,
-          flexShrink: 0,
+          flexShrink: 10,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
