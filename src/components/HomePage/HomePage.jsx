@@ -14,9 +14,6 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 
 
-
-
-
 function HomePage() {
   const history = useHistory();
   const [songList, setSongList] = useState([]);
@@ -54,14 +51,8 @@ function HomePage() {
   return (
     <div className="container">
       <div>
-        <Typography align='center'> 
-        {/* Testing button layouts  */}
-        {/* <Button sx={{ color: 'white', backgroundColor: 'black', borderColor: 'black',  }} variant="contained" onClick={() => history.push('/create')}>Create Post</Button> <br/> */}
-        </Typography>
-        
+        <Typography align='center' /> 
         <br />
-        {/* Stretch goal for profile is not implemented */}
-        {/* <Button variant="outlined" onClick={() => history.push('/profile')}>profile</Button> */}
         <Box>
           <Grid 
           container 
