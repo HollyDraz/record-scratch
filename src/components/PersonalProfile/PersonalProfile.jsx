@@ -28,6 +28,11 @@ function PersonalProfile (){
       <CssBaseline />
       <Container fixed>
         {/* add the spotify album here */}
+        <Card>
+          <CardContent>
+            <p> AAAAAHHHHH </p>
+          </CardContent>
+        </Card>
 
       </Container>
     </div>
