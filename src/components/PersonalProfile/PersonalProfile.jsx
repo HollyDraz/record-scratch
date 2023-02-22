@@ -11,8 +11,10 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from '@mui/material/Grid';
+import { CssBaseline } from '@mui/material';
 
 function PersonalProfile (){
   const history = useHistory();
@@ -22,19 +24,13 @@ function PersonalProfile (){
   const dispatch = useDispatch();
 
   return (
-    <Grid
-    container
-    direction="column"
-    justifyContent="center"
-    alignItems="center">
-    <Box>
-      <Card>
-        <CardContent>
-        <p> Testing box</p>
-        </CardContent>
-      </Card>
-    </Box>
-    </Grid>
+    <div className='profile'>
+      <CssBaseline />
+      <Container fixed>
+        {/* add the spotify album here */}
+
+      </Container>
+    </div>
   )
 
 }
