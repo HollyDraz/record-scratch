@@ -22,11 +22,19 @@ function PersonalProfile (){
   const dispatch = useDispatch();
 
   return (
+    <Grid
+    container
+    direction="column"
+    justifyContent="center"
+    alignItems="center">
     <Box>
       <Card>
-      <p> Testing box</p>
+        <CardContent>
+        <p> Testing box</p>
+        </CardContent>
       </Card>
     </Box>
+    </Grid>
   )
 
 }
