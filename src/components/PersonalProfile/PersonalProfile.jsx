@@ -26,7 +26,10 @@ function PersonalProfile (){
   return (
     <div className='profile'>
       <CssBaseline />
-      <Container fixed>
+      <Typography>Hello User </Typography>
+      <br/>
+      <br/>
+      <Container>
         {/* add the spotify album here */}
         <Card>
           <CardContent>
