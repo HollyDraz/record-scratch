@@ -29,6 +29,7 @@ function PersonalProfile (){
       <Typography>Hello User </Typography>
       <br/>
       <br/>
+      <Grid>
       <Container>
         {/* add the spotify album here */}
         <Card>
@@ -36,8 +37,8 @@ function PersonalProfile (){
             <p> AAAAAHHHHH </p>
           </CardContent>
         </Card>
-
       </Container>
+      </Grid>
     </div>
   )
 
