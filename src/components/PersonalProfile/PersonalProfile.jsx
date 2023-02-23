@@ -32,7 +32,8 @@ function PersonalProfile (){
       <Grid>
       <Container>
         {/* add the spotify album here */}
-        <Card>
+        <Card 
+        sx={{border: "10px  maroon double ",  borderRadius: "10px"}}>
           <CardContent>
             <p> AAAAAHHHHH </p>
           </CardContent>
