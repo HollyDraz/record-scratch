@@ -1,6 +1,6 @@
 
 # Record Scratch
-Record Scratch was created for those who love listening to music and love sharing it as well. Many popular streaming services have a recommendation algorithm but its not the same as when another human gives you a personal song to jam to. And thats where Record Scratch comes in. 
+Record Scratch is a platform designed for music enthusiasts who not only enjoy listening to music but also relish the joy of sharing it. While numerous streaming services offer recommendation algorithms, there's a distinctive magic when a fellow human handpicks a personal song just for you to groove to. And that's precisely where Record Scratch steps in."
 
 
 ## Prerequisites:
