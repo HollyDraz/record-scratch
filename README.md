@@ -49,7 +49,7 @@ from the database.sql.
 ## Demo
 
 
-Note: I'm currenlty adding more features and make aesthic changes so this video will not refelect the current state of record scratch but will give a great overview into what the core uses of the app is:
+Note: I'm currenlty adding more features and make aesthetic changes so this video will not refelect the current state of record scratch but will give a great overview into what the core uses of the app is:
 
 https://www.youtube.com/watch?v=6uPMdigUZD0&ab_channel=HollyDraz
 
@@ -62,6 +62,9 @@ Thank you to Prime Academy for equipping us with the information to make this ap
 ## 🛠 Made Using:
 Javascript, HTML, CSS, React, Redux, MUI
 
+## Images:
+
+TBA
 
 ## 🔗 Links
 
