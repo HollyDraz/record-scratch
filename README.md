@@ -33,15 +33,15 @@ from the database.sql.
 ```bash
 1. First Sign into app or register for an account
 
-2. User will be brought to the homepage where they may view all previous posts
+2. Users will be brought to the homepage where they may view all previous posts
 
-3. User can select the record labeled "create" and can view the create page
+3. The user can select the record labeled "create" and can view the create page
 
 4. On the create page user will be prompted to enter information for their song of choice
 
-5. Once the user hit post the post will be added to the database and will also appear on the homepage
+5. Once the user hits post the post will be added to the database and will also appear on the homepage
 
-6. One the homepage can also see that there is an edit button on all their posts -
+6. On the homepage can also see that there is an edit button on all their posts -
 
 7. Once the edit button is clicked the user will be brought to the edit page that has the corresponding information for that post
 ```
@@ -50,11 +50,10 @@ from the database.sql.
 
 ## Screenshots
 
-![alt text](file:///Users/hollydrazenovich/Desktop/Screenshot%202023-11-14%20at%2010.31.46%20PM.png)
 ## Demo
 
 
-Note: I'm currenlty adding more features and make aesthic changes so this video will not refelect the current state of record scratch but will give a great overview into what the core uses of the app is:
+Note: I'm currently adding more features and making aesthetic changes so this video will not reflect the current state of record scratch but will give a great overview of what the core uses of the app are:
 
 https://www.youtube.com/watch?v=6uPMdigUZD0&ab_channel=HollyDraz
 
