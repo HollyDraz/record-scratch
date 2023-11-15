@@ -45,7 +45,12 @@ from the database.sql.
 
 7. Once the edit button is clicked the user will be brought to the edit page that has the corresponding information for that post
 ```
-    
+
+
+
+## Screenshots
+
+![alt text](file:///Users/hollydrazenovich/Desktop/Screenshot%202023-11-14%20at%2010.31.46%20PM.png)
 ## Demo
 
 
